@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RACE
 {
-    abstract class Car
+    class Car
     {
         public string NameOfCar { get; set; }
         public Car(string name)
@@ -26,7 +26,7 @@ namespace RACE
         public virtual void ChooseColour() { }
         public virtual void Painting() { }
         public virtual int PutNewEngine() { return 0; }
-        public abstract int Cost();
+        public virtual int Cost() { return 0; }
         public virtual void PrintCharacteristics()
         {
             Console.WriteLine("Your car :" + NameOfCar);
