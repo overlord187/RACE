@@ -1,5 +1,6 @@
 ﻿using System;
 using RACE.Classic;
+using RACE.Classic.DifficultyLevel;
 
 namespace RACE
 {
@@ -65,9 +66,6 @@ namespace RACE
                         string answer3 = Console.ReadLine();
                         if (answer3.Equals("No"))
                         {
-                            
-
-
                         }
                         if (answer3.Equals("Yes"))
                         {
@@ -90,17 +88,36 @@ namespace RACE
                         }
 
                     }
-                    Console.WriteLine("Please, wait, game is about to start");
+                    
                
                 }
                 else
                 {
                     Car car = new JustCar(NameOfCar);
                     car.PrintCharacteristics();
-                    Console.WriteLine("Please, wait, game is about to start");
+                    
                    
                 }
-               
+
+                Console.WriteLine("Select the difficulty level of the game");
+                string level = Console.ReadLine(); // easy, middle, hard
+                if (level.Equals("Easy"))
+                {
+                    DifficultyLevel dif = new Easy(level);
+                    Bots bots = dif.Create();
+                }
+                if (level.Equals("Middle"))
+                {
+                    DifficultyLevel dif = new Middle(level);
+                    Bots bots = dif.Create();
+                }
+                if (level.Equals("Hard"))
+                {
+                    DifficultyLevel dif = new Hard(level);
+                    Bots bots = dif.Create();
+                }
+
+                Console.WriteLine("Please, wait, game is about to start");
                 game.Start();
             }
             if (choice.Equals("Heavinly"))
