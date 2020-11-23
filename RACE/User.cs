@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RACE
 {
-    sealed class User
+    sealed class User 
     {
         private static User instance;
         private static User user = new User();
@@ -23,4 +23,6 @@ namespace RACE
             return instance;
         }
     }
+
+  
 }

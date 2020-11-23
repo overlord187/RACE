@@ -118,6 +118,9 @@ namespace RACE
 
                 Console.WriteLine("Please, wait, game is about to start");
                 game.Start();
+                Movable mova = new Movable(); // observer
+                Car observer = new Car(NameOfCar, mova);
+                mova.RoadHazards();
                     Movable mov = new Movable(new Forward());
                     mov.Move();
                 while (true)

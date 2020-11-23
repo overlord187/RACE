@@ -1,16 +1,28 @@
-﻿using System;
+﻿using RACE.Classic.MechanicsOfTheGame;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace RACE
 {
-    class Car
+    class Car : IObserver
     {
         public string NameOfCar { get; set; }
+        IObservable mova;
+        
+
+        public Car(string name, IObservable obs)
+        {
+            this.NameOfCar = name;
+            mova = obs;
+            mova.RegisterObserver(this);
+        }
+
         public Car(string name)
         {
             this.NameOfCar = name;
         }
+
         public virtual int MaxSpeed()
         {
             return 220;
@@ -29,11 +41,21 @@ namespace RACE
         public virtual int Cost() { return 0; }
         public virtual void PrintCharacteristics()
         {
-            Console.WriteLine("Your car :" + NameOfCar);
+            Console.WriteLine("Your car : " + NameOfCar);
             Console.WriteLine("Colour : black");
-            Console.WriteLine("Max speed" + MaxSpeed());
-            Console.WriteLine("Power of engine" + EPower());
-            Console.WriteLine("Cost" + Cost());
+            Console.WriteLine("Max speed : " + MaxSpeed());
+            Console.WriteLine("Power of engine : " + EPower());
+            Console.WriteLine("Cost : " + Cost());
+        }
+
+        //=================================================================//
+        //observer//
+        
+        public void Warning(object ob)
+        {
+            Obstacle obstacle = (Obstacle)ob;
+            Console.WriteLine("Num of big obstacles : " + obstacle.Big);
+            Console.WriteLine("Num of little obstacles : " + obstacle.Little);
         }
 
     }
