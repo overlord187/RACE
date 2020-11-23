@@ -32,8 +32,7 @@ namespace RACE
                         string answer3 = Console.ReadLine();
                         if (answer3.Equals("No"))
                         {
-                           
-            
+    
                         }
                         if (answer3.Equals("Yes"))
                         {
@@ -41,7 +40,7 @@ namespace RACE
                             car = new TunedCar(car);
                             car.ChooseColour();
                             car.Painting();
-                            car.PrintCharacteristics();
+                            
                         }
                         Console.WriteLine("Do you want to put a new engine?");
                         string answer4 = Console.ReadLine();
@@ -145,6 +144,7 @@ namespace RACE
                     {
                         Movable mov4 = new Movable(new Stop());
                         mov4.Move();
+                        Console.WriteLine("Do you want to finish game)");
                         string finish = Console.ReadLine();
                         if (finish.Equals("Yes"))
                         {

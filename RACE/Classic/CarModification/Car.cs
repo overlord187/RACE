@@ -8,6 +8,7 @@ namespace RACE
     class Car : IObserver
     {
         public string NameOfCar { get; set; }
+        //==========================================================================//
         IObservable mova;
         
 
@@ -17,7 +18,7 @@ namespace RACE
             mova = obs;
             mova.RegisterObserver(this);
         }
-
+        //==================================================================//
         public Car(string name)
         {
             this.NameOfCar = name;
@@ -35,14 +36,15 @@ namespace RACE
         {
             return 13;
         }
-        public virtual void ChooseColour() { }
+        public virtual void ChooseColour() {}
         public virtual void Painting() { }
         public virtual int PutNewEngine() { return 0; }
         public virtual int Cost() { return 0; }
+        public string Colour { get; set; }
         public virtual void PrintCharacteristics()
         {
             Console.WriteLine("Your car : " + NameOfCar);
-            Console.WriteLine("Colour : black");
+            Console.WriteLine("Colour : " + Colour);
             Console.WriteLine("Max speed : " + MaxSpeed());
             Console.WriteLine("Power of engine : " + EPower());
             Console.WriteLine("Cost : " + Cost());

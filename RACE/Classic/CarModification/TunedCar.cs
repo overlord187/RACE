@@ -6,7 +6,7 @@ namespace RACE.Classic
 {
     class TunedCar : CarDecorator
     {
-        public string Colour { get; set; }
+        
         public TunedCar(Car c): base(c.NameOfCar, c)
         {
            
@@ -19,6 +19,8 @@ namespace RACE.Classic
         {
             Console.WriteLine("Select a colour");
             Colour = Console.ReadLine();
+            
+           
 
         }
         public override void Painting()
