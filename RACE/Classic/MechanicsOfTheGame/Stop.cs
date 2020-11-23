@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RACE.Classic
 {
-    class Stop
+    class Stop : IRaceOnTheTrack
     {
         public void Move()
         {

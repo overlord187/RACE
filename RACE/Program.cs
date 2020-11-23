@@ -1,6 +1,7 @@
 ﻿using System;
 using RACE.Classic;
 using RACE.Classic.DifficultyLevel;
+using RACE.Classic.MechanicsOfTheGame;
 
 namespace RACE
 {
@@ -14,7 +15,7 @@ namespace RACE
             if (choice.Equals("Classic"))
             {
                 Console.WriteLine("Enter your name");
-                Game game = new Game(User.Player.name, new ClassicRacing());
+                Game game = new Game(User.Player.name, new ClassicRacing(), new ClassicRacing()) ;
                 Console.WriteLine("Enter name of car");
                 string NameOfCar = Console.ReadLine();
                 Console.WriteLine("Do you want to mofidy the car?");
@@ -88,8 +89,6 @@ namespace RACE
                         }
 
                     }
-                    
-               
                 }
                 else
                 {
@@ -119,12 +118,44 @@ namespace RACE
 
                 Console.WriteLine("Please, wait, game is about to start");
                 game.Start();
+                    Movable mov = new Movable(new Forward());
+                    mov.Move();
+                while (true)
+                {
+                    string moving = Console.ReadLine();
+                    if (moving.Equals("Left"))
+                    {
+                        Movable mov1 = new Movable(new ToTheLeft());
+                        mov1.Move();
+                    }
+                    if (moving.Equals("Right"))
+                    {
+                        Movable mov2 = new Movable(new ToTheRight());
+                        mov2.Move();
+                    }
+                    if (moving.Equals("Forward"))
+                    {
+                        Movable mov3 = new Movable(new Forward());
+                        mov3.Move();
+                    }
+                    if (moving.Equals("Stop"))
+                    {
+                        Movable mov4 = new Movable(new Stop());
+                        mov4.Move();
+                        string finish = Console.ReadLine();
+                        if (finish.Equals("Yes"))
+                        {
+                            game.Finish();
+                        }                           
+                    }
+                }
             }
             if (choice.Equals("Heavinly"))
             {
                 Console.WriteLine("Enter your name");
-                Game game = new Game(User.Player.name, new HeavinlyRacing());
+                Game game = new Game(User.Player.name, new HeavinlyRacing(), new HeavinlyRacing());
                 game.Start();
+                game.Finish();
             }
             
         }

@@ -7,6 +7,7 @@ namespace RACE
     interface IGame
     {
         void Start();
+        void Finish();
         
     }
 }

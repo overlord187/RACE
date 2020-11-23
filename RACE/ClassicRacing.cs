@@ -11,5 +11,9 @@ namespace RACE
             Console.WriteLine("The game begins in Classic race mode...");
         }
              
+        public void Finish()
+        {
+            Console.WriteLine("The race is over");
+        }
     }
 }
