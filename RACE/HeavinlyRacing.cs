@@ -6,6 +6,14 @@ namespace RACE
 {
     class HeavinlyRacing : IGame
     {
+        public int Property
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void Start()
         {
             Console.WriteLine("The game begins in Heavinly race mode...");

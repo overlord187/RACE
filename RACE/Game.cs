@@ -4,10 +4,10 @@ using System.Text;
 
 namespace RACE
 {
-    class Game
+    class Game : IGame
     {
         public string Name { get; set; }
-        public Game(string name, IGame start,IGame finish)
+        public Game(string name, IGame start, IGame finish)
         {
             this.Name = name;
             StartGame = start;
