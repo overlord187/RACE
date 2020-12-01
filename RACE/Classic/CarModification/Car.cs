@@ -46,7 +46,7 @@ namespace RACE
             Console.WriteLine("Your car : " + NameOfCar);
             Console.WriteLine("Colour : " + Colour);
             Console.WriteLine("Max speed : " + MaxSpeed());
-            Console.WriteLine("Power of engine : " + EPower());
+            Console.WriteLine("Power of engine : " + PutNewEngine());
             Console.WriteLine("Cost : " + Cost());
         }
 
