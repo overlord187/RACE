@@ -54,36 +54,36 @@
     </TypeIdentifier>
   </Class>
   <Class Name="RACE.Classic.JustCar">
-    <Position X="26.75" Y="5.75" Width="1.5" />
+    <Position X="24.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classic\CarModification\JustCar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RACE.Classic.SportCar">
-    <Position X="29.25" Y="5.75" Width="1.5" />
+    <Position X="30" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classic\CarModification\SportCar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RACE.Classic.TunedCar">
-    <Position X="22" Y="4" Width="1.5" />
+    <Position X="20" Y="4" Width="1.5" />
     <InheritanceLine Type="RACE.Classic.CarDecorator" FixedToPoint="true">
       <Path>
         <Point X="24.25" Y="3.434" />
-        <Point X="24.25" Y="3.625" />
-        <Point X="22.75" Y="3.625" />
-        <Point X="22.75" Y="4" />
+        <Point X="24.25" Y="3.7" />
+        <Point X="20.75" Y="3.7" />
+        <Point X="20.75" Y="4" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAARAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Classic\CarModification\TunedCar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RACE.Classic.UpgradedCar">
-    <Position X="25.5" Y="4" Width="1.5" />
+    <Position X="25.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classic\CarModification\UpgradeCar.cs</FileName>
@@ -209,6 +209,42 @@
       <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Classic\MechanicsOfTheGame\Obstacle.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="RACE.Classic.TunedFlyCar">
+    <Position X="21.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAARAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Classic\CarModification\TunedFlyCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RACE.Classic.UpgradedFlyCar">
+    <Position X="23.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\CarModification\UpgradeFlyCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RACE.Classic.FlyCar">
+    <Position X="28.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\CarModification\FlyCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RACE.Classic.Raket">
+    <Position X="26.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\CarModification\Raket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RACE.Classic.Nitro">
+    <Position X="29" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\MechanicsOfTheGame\Nitro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="RACE.IGame">
     <Position X="18" Y="0.5" Width="1.5" />

@@ -164,7 +164,7 @@ namespace RACE
                 string answer = Console.ReadLine();
                 if (answer.Equals("Yes"))
                 {
-                    Console.WriteLine("Select a car"); //FlyCar or Roket
+                    Console.WriteLine("Select a car"); //FlyCar or Rocket
                     string answer2 = Console.ReadLine();
                     if (answer2.Equals("FlyCar"))
                     {
